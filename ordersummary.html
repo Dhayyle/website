@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Receipt - Edi Wow Burgers</title>
+    <link rel="shortcut icon" href="assets/images/burgericon.png" type="image/png">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+     
+    
+    body {
+        background-color: #f0d0a7be; /* Light beige color */
+        font-family: 'Arial', sans-serif;
+    }
+    .receipt-container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    .receipt-container:hover {
+        transform: scale(1.02);
+    }
+    .receipt-header {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .receipt-table img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .total-section {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: right;
+        color: #28a745; /* Green color for total */
+    }
+    .btn {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    h4 {
+        color: #007bff; /* Bootstrap primary color */
+        margin-bottom: 15px;
+    }
+    .form-label {
+        font-weight: bold;
+    }
+    .receipt-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .receipt-container:hover {
+            transform: scale(1.02);
+        }
+        .receipt-header {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .receipt-table img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .total-section {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: right;
+            color: #28a745; /* Green color for total */
+        }
+        .btn {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h4 {
+            color: #007bff; /* Bootstrap primary color */
+            margin-bottom: 15px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+</style>
+    
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Food Receipt</h2>
+        <div class="receipt-container">
+            <h4 class="receipt-header">Order Details</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="receiptItems">
+                    <!-- Order items will be inserted dynamically -->
+                </tbody>
+            </table>
+            <h5 class="total-section">Total: <span id="receiptTotal">₱0.00</span></h5>
+        </div>
+        <div class="receipt-container mt-3">
+            <h4>Delivery Information</h4>
+            <form id="deliveryForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Delivery Address</label>
+                    <textarea id="address" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Contact Number</label>
+                    <input type="text" id="phone" class="form-control" required>
+                </div>
+                <a href="thankyou.html" class="btn w-100 mt-2">Confirm Order</a>
+                <a href="choosing.html" class="btn w-100 mt-2">Back to Menu</a>
+            </form>
+        </div>
+    </div>
+
+   
+</body>
+</html>
